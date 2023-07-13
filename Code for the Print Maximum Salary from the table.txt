@@ -1,0 +1,26 @@
+
+-- creating the table name EMPLOYEE
+CREATE TABLE EMPLOYEE (
+  empId INTEGER PRIMARY KEY,
+  name TEXT NOT NULL,
+  dept TEXT NOT NULL,
+  Salary INTEGER NOT NULL
+);
+
+-- inserting the records(rows) in the table
+INSERT INTO EMPLOYEE VALUES (1, 'Henry',    'Sales'   ,5000);
+INSERT INTO EMPLOYEE VALUES (2, 'Brown',    'Account' ,4000);
+INSERT INTO EMPLOYEE VALUES (3, 'John',     'Sales'   ,2000);
+INSERT INTO EMPLOYEE VALUES (4, 'Roman',    'Account' ,6000);
+INSERT INTO EMPLOYEE VALUES (5, 'Dean',     'Sales'   ,1000);
+INSERT INTO EMPLOYEE VALUES (6, 'Usos',     'Account' ,3000);
+INSERT INTO EMPLOYEE VALUES (7, 'Brock',    'Sales'   ,7000);
+INSERT INTO EMPLOYEE VALUES (8, 'undertaker','Sales'  ,8000);
+
+Select * FROM EMPLOYEE;
+
+-- Print the maximum salary in the table
+ SELECT MAX(empId) AS "Highest salary" FROM EMPLOYEE;
+
+-- print the row having maximum salary in the table
+ Select * FROM EMPLOYEE where Salary= (SELECT MAX(Salary) FROM EMPLOYEE);
